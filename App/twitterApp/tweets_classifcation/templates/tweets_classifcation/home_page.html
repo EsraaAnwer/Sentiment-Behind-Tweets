@@ -1,0 +1,63 @@
+{% extends "tweets_classifcation/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<div class="home_page">
+
+	<div class="row">
+		<div class="col-md-6 user_input_form">
+			<form method='POST'>
+				{% csrf_token %}
+			   <div class="form-group">
+
+			    <textarea rows="6" cols="8" class="form-control" name="user_text" ></textarea>
+			    <p class="error_input">
+			    	
+			    </p>
+			  </div>
+			  	  <div class="form-group">
+			    <label style="color: #0084c8; font-size: 25px;">Language</label>
+			   <div class="select language_choice" tabindex="1">
+				  <input class="selectopt" value="English" name="language_selected" type="radio" id="opt1" checked>
+				  <label for="opt1"  class="option">English
+				  	<!-- <img class="language_img" src="{% static "images/uk_logo.png" %}" > -->
+				  </label>
+				  <input class="selectopt" value="Arabic" name="language_selected" type="radio" id="opt2">
+				  <label for="opt2" class="option">Arabic
+				  	<!-- <img class="language_img" src="{% static "images/Saudi_Arabia.png" %}" > -->
+				  </label>
+				
+				  </label>
+				</div>
+			  </div>
+			  <div class="submit_btns">
+			  	<button type="submit" class="btn btn-primary submit_text">Classify Tweet</button>
+			  	<button type="submit" class="btn btn-primary twitter_account">Classify Twitter Account</button>	  	
+			  </div>
+			</form>
+			<div class="user_input_result">
+
+			</div>
+
+			
+		</div>
+		<div class="col-md-6">
+			<div>
+
+			<div id="reviews_pic_chart">
+			<!-- <h3 class="account_name alert alert-primary">Pie Graph</h3> -->
+			<!-- <img class="pie_chart" src="" title="Pie Chart" draggable="false"> -->
+			
+        	</div>
+      		</div>
+		</div>
+		</div>
+
+	</div>
+	<dir class="row">
+	<div class="col-md-12 tweets_classifcation_result">
+			<h3 class="account_name alert alert-primary">Classified Tweets for <span></span> </h3>
+	</div>
+	</div>
+{% endblock content %}  

@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="{% static "images/logo1.png" %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Text Readability Analysis</title>
+
+     <link rel="stylesheet"   href=" {% static "css/owl.carousel.min.css" %}">
+     <link rel="stylesheet" href=" {% static "css/owl.theme.default.min.css" %}">
+     <link rel="stylesheet" href=" {% static "css/all.css" %}">
+    <link rel="stylesheet" href=" {% static "css/style.css" %}">
+
+  </head>
+  <body>
+      <!-- start Our NavBar  Style -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img style="width: 120px" title="Logo" class="site_logo" src="{% static "images/logo1.png" %}">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home_page' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {%if not user.is_authenticated%}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'signup_form' %}">SingUP <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login_form' %}">LogIn <span class="sr-only">(current)</span></a>
+      </li>
+      {%else%}
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'logout_form' %}">LogOut <span class="sr-only">(current)</span></a>
+      </li>
+      {%endif%}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'contact_form' %}">Contact Us <span class="sr-only">(current)</span></a>
+      </li>
+      {%if  user.is_authenticated%}
+      <li class="nav-item active first_name_displayed">
+        <a class="nav-link"> {{ user.first_name }} <span class="sr-only">(current)</span></a>
+      </li>
+        {%endif%}
+    </ul>
+
+  </div>
+</nav>
+     
+      <!-- End Our NavBar  Style -->
+
+  <!-- start and end of any page content then with any base there is upper navbar  and bottom footer -->
+  <div class="container" class="" style="position: relative; top: 30px">
+    {% block content %}
+      load pages here
+    {% endblock content %}
+</div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script src=" {% static "js/owl.carousel.min.js" %} "></script>
+    <script src=" {% static "js/all.js" %}"></script>
+
+    <script src=" {% static "js/script.js" %}"></script>
+
+
+  </body>
+</html>

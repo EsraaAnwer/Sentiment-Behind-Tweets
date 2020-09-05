@@ -1,0 +1,361 @@
+
+
+/*
+  #################### $Start Main strucure style ####################
+*/
+
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, i, dl, dt, dd, ol, ul, li, fieldset,form, label,legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer,header, hgroup, menu, nav, 
+section, summary, time, mark, audio, video{
+    outline: none !important;
+}
+
+body{ background: #cecece; overflow-x: hidden; }
+
+body.scrolling_behavior{ overflow: hidden; }
+
+input, button{ outline: 0 }
+
+li{ list-style-type: none; }
+
+dl, ol, ul{ margin: 0; }
+
+li{ list-style-type: none; }
+
+li a{ color: inherit; }
+
+.dark_gray{
+  background: #afafaf;
+color: #2E2E2E;
+}
+
+.fa-frown{color: #800909}
+.fa-smile-wink{color: #0d864c}
+
+
+@font-face {
+  font-family: "Anton-Regular";
+  src: url("../fonts/Anton-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Cairo-Black";
+  src: url("../fonts/Cairo-Black.ttf");
+}
+
+.RubikMonoOne-font{ font-family: 'Rubik Mono One', sans-serif; }
+
+.Montserrat-font{ font-family: 'Montserrat', sans-serif; }
+
+
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:hover,
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+  #################### End Main strucure style ####################
+*/
+
+.home_page .user_input_form .submit_btns{
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+
+
+.home_page .user_input_form textarea{
+/*  box-shadow: 0px 0px 5px #282424;
+  outline: none;
+  border: 1px solid #ddd;*/
+  height: 200px;
+  pointer-events: auto;
+  border: none;
+  font-size: 18px;
+  white-space: pre-wrap;
+  resize: none;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 50em;
+  line-height: 2;
+  /*background: transparent;*/
+  margin: 0 auto;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+
+.home_page  .error_input.error_message{
+  padding: 5px;
+  margin: 10px;
+  text-align: c;
+  font-size: 25px;
+  padding: .50rem 1rem;
+  border-radius: .25rem;
+  color: #721c24;
+  border-color: #f5c6cb;
+  background: #f8d7da
+}
+
+
+.home_page .user_input_form .submit_btns button{
+  width: 35%;
+  color: #fff;
+  background: #000;
+  padding: 8px 15px;
+  border: none;
+  box-sizing: 0 0 11px #fff;
+  transition: .5s;
+  font-size: 20px;
+  margin:20px;
+  display: block;
+  width: 100%;
+  margin:15px auto;
+}
+.tweets_classifcation_result{
+  margin-top: 20px
+}
+.tweets_classifcation_result .Tweet_text{
+  background: #fff;
+  padding: 10px;
+  text-align: left;
+  font-size: .90em;
+  
+}
+.tweets_classifcation_result .Tweet_text span{
+  font-size: 1em;
+  font-weight: bold;
+  color: #321FB5
+}
+.tweets_classifcation_result .Tweet_text .Tweet_Class{
+  text-align: left;
+  color: #321FB5 
+}
+.tweets_classifcation_result .Tweet_text .Tweet_Class span
+{
+/*color: red !important;*/
+
+}
+.tweets_classifcation_result .Tweet_text .Tweet_Class{
+  display: block;
+}
+.account_name{
+  text-align: center;
+}
+
+body{
+  background: #003436;
+padding: 20px;
+}
+
+#reviews_pic_chart .pie_chart{
+  
+ position: absolute;
+  right: 18%;
+  width: 22em;
+  height: 20em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NEw*/
+
+
+
+.login_page .login_error,
+.signup_page  .signup_error{ margin: 20px; }
+
+.signup_page .sign_content img,
+.login_page .login_content img{
+  position: absolute;
+  right: 0;
+  top: 0%;
+}
+
+.signup_page .signup_form .error_signup_div{ display: none }
+.signup_page .signup_form p span, 
+.signup_page .signup_form ul,
+.contact_us_page .contact_us_form label,
+.signup_page .signup_form label,
+.login_page .login_form p label{
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
+
+.signup_page .signup_form button:hover,
+.login_page .login_form  button:hover,
+.contact_us_page .contact_us_form .submit_contact:hover{
+  transform: scale(1.5,1);
+  letter-spacing: 5px;
+  background-image:  linear-gradient(to right, white , black);
+  color: #000
+
+}
+
+.contact_us_page .contact_us_form .submit_contact_error{
+  color: #721c24;
+  /*background-color: #f8d7da;*/
+  border-color: #f5c6cb;
+  padding: 10px;
+  /*box-shadow: 0 0 5px #771414;*/
+  font-size: 20px;
+}
+
+.signup_page .signup_form input,
+.login_page .login_form input,
+.contact_us_page .contact_us_form input,
+.contact_us_page .contact_us_form textarea,
+.home_page .user_input_form textarea{
+  display: block;
+  width: 100%;
+  background: #15161a;
+  border: 2px solid #fff;
+  padding: 15px;
+  box-shadow: 0px 0px 12px #17191d;
+  color: #fff;
+  border-bottom-right-radius: 20%;
+  
+}
+
+.signup_page .signup_form button,
+.login_page .login_form  button,
+.contact_us_page .contact_us_form .submit_contact{
+  width: 40%;
+  color: #fff;
+  background: #000;
+  padding: 8px 15px;
+  border: none;
+  box-sizing: 0 0 11px #fff;
+  transition: .5s;
+  font-size: 20px;
+  display: block;
+  margin:auto;
+  outline: none;
+  margin-top: 50px
+}
+
+
+
+.home_page .user_input_form .submit_btns{
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.home_page .user_input_form .submit_btns button:hover{
+  transform: scale(1.2,1);
+  letter-spacing: 2px;
+  background-image:  linear-gradient(to right, white , black);
+  color: #000
+}
+
+.home_page .user_input_form .submit_btns button{
+  width: 40%;
+  color: #fff;
+  background: #000;
+  padding: 8px 15px;
+  border: none;
+  box-sizing: 0 0 11px #fff;
+  transition: .5s;
+  font-size: 20px;
+  margin:20px;
+}
+.contact_us_page .contact_us_form .submit_contact{ margin-bottom: 50px !important }
+.home_page .user_input_form .submit_btns button{
+  width: 80%
+}
+
+.first_name_displayed{
+  position: absolute;
+  right: 5%;
+  font-size: 20px;
+}
+
+.navbar{
+  padding: 0 1rem
+}
+.sign_content .side_sign{
+  width: 450px 
+}
+
+
+.language_img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50px;
+}
+
+/*.empty_output.active{
+  transition: .5;
+  position: fixed;
+  width: 100%;
+  height: ;
+  background: red;
+  height: 100%;
+  z-index: 9999999;
+
+}*/
+
+.arabic_seg .api_result,
+.arabic_lemma .api_result,
+.arabic_SpCH .api_result,
+.arabic_Diac .api_result,
+.arabic_Diac2 .api_result{
+   text-align: right;
+  word-wrap: break-word;
+  font-size: 20px;
+ 
+}
+/*.language_choice, .faras_api_choise{
+  display: 
+}*/
+
+.readibilty_heading{
+  color: #0084c8
+}
+
+.readability_report{
+  margin-bottom: 15px;
+  margin-top: -35px;
+  color: blue;
+  font-size: 20px;
+}
+
+.option{
+  color: #fff !important
+}
